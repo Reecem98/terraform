@@ -1,0 +1,9 @@
+az account set --subscription "b8edd751-b279-4c4d-89a5-7c05cc423fe0"
+
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/b8edd751-b279-4c4d-89a5-7c05cc423fe0"
+
+
+$Env:ARM_CLIENT_ID = "89260b10-580e-4101-bff7-c31983e68a33"
+$Env:ARM_CLIENT_SECRET = "q6T8Q~CrtnHDDEXh4ss34WP3JcWtx3p~sN3sCah_"
+$Env:ARM_SUBSCRIPTION_ID = "2e298015-ef3c-439f-bedb-3c33ef1b9834"
+$Env:ARM_TENANT_ID = "2e298015-ef3c-439f-bedb-3c33ef1b9834"

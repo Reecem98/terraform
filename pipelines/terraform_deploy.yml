@@ -1,0 +1,21 @@
+name: Terraform Apply - Dev
+
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform_apply:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: terraform init ./terraform/environments/dev
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve ./terraform/environments/dev
